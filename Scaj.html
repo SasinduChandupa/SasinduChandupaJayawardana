@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="Image/Scaj.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sasindu Chandupa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    
+    <script src="script.js"></script>
+    <style>
+        /* Bubble Background */
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #3d638a;
+            overflow-y: auto;
+            /* Allow vertical scrolling */
+            position: relative;
+        }
+
+        .bubble {
+            position: absolute;
+            bottom: -50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: rise 10s infinite;
+            pointer-events: none;
+            /* Prevent bubbles from interfering with mouse events */
+        }
+
+        @keyframes rise {
+            0% {
+                transform: translateY(0);
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+
+        .bubble:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            left: 10%;
+            animation-delay: 0s;
+            animation-duration: 8s;
+        }
+
+        .bubble:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            left: 30%;
+            animation-delay: 2s;
+            animation-duration: 10s;
+        }
+
+        .bubble:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            left: 50%;
+            animation-delay: 4s;
+            animation-duration: 9s;
+        }
+
+        .bubble:nth-child(4) {
+            width: 140px;
+            height: 140px;
+            left: 70%;
+            animation-delay: 1s;
+            animation-duration: 7s;
+        }
+
+        .bubble:nth-child(5) {
+            width: 90px;
+            height: 90px;
+            left: 80%;
+            animation-delay: 3s;
+            animation-duration: 11s;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            /* Ensure content is above the bubbles */
+            padding: 20px;
+        }
+
+        .bubbles-container {
+            position: fixed;
+            /* Change to fixed to make it scroll with the page */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            /* Prevent the bubbles container from blocking content interactions */
+        }
+
+        /* Media Queries for Mobile Devices */
+        @media (max-width: 768px) {
+            .bubble {
+                opacity: 0.6;
+                /* Reduce opacity on smaller screens */
+            }
+
+            .bubble:nth-child(1) {
+                width: 50px;
+                height: 50px;
+                left: 10%;
+            }
+
+            .bubble:nth-child(2) {
+                width: 80px;
+                height: 80px;
+                left: 30%;
+            }
+
+            .bubble:nth-child(3) {
+                width: 70px;
+                height: 70px;
+                left: 50%;
+            }
+
+            .bubble:nth-child(4) {
+                width: 100px;
+                height: 100px;
+                left: 70%;
+            }
+
+            .bubble:nth-child(5) {
+                width: 60px;
+                height: 60px;
+                left: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body class=" text-white">
+    <div class="bubbles-container">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="flex justify-center items-center p-4 bg-gray-700 w-full">
+        <ul class="flex space-x-6 md:space-x-12 text-lg md:text-xl font-medium">
+            <li id="l1"><a class="hover:text-gray-300" href="#home">Home</a></li>
+            <li id="l2"><a class="hover:text-gray-300" href="#footer">About</a></li>
+            <li id="l3"><a class="hover:text-gray-300" href="https://wa.me/94769773393">Contact</a></li>
+            <li id="l4"><a class="hover:text-gray-300" href="#skills">Skills</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="text-center ">
+        <div id="typewriter" class="text-2xl font-bold"></div>
+        <div class="mt-6">
+            <h1 class="text-4xl font-bold">I'm <span class="text-yellow-400">SASINDU CHANDUPA</span></h1>
+            <p class="mt-4 text-lg font-semibold">I'm a Software Engineering undergraduate student at NIBM GALLE
+                campus.
+                I love developing responsive web pages</p>
+
+        </div>
+    </section>
+
+    <!-- Type writer -->
+    <div class="typewriter-container mt-4 text-center">
+        <p class="typewriter-1 text-lg font-semibold text-yellow-400 text-4xl font-bold"></p>
+        <p class="typewriter-2 text-lg font-semibold text-gray-900 hidden text-4xl font-bold"></p>
+        <p class="typewriter-3 text-lg font-semibold text-gray-900 hidden text-4xl font-bold"></p>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const typewriter1Text = "Most Interest";
+            const typewriter2Text = "Front-end Developing";
+            const typewriter3Text = "UI/UX Designing";
+            
+            const typewriter1 = document.querySelector('.typewriter-1');
+            const typewriter2 = document.querySelector('.typewriter-2');
+            const typewriter3 = document.querySelector('.typewriter-3');
+    
+            let index = 0;
+    
+            function typeWriter(text, element, callback) {
+                if (index < text.length) {
+                    element.innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(() => typeWriter(text, element, callback), 100); 
+                } else {
+                    index = 0;
+                    setTimeout(callback, 1000);
+                }
+            }
+    
+            function startTypingSequence() {
+                // Clear all paragraphs before starting a new cycle
+                typewriter1.innerHTML = '';
+                typewriter2.innerHTML = '';
+                typewriter3.innerHTML = '';
+    
+                //first text
+                typeWriter(typewriter1Text, typewriter1, () => {
+                    typewriter1.classList.add('hidden');
+                    typewriter2.classList.remove('hidden');
+    
+                    // second text
+                    typeWriter(typewriter2Text, typewriter2, () => {
+                        typewriter2.classList.add('hidden');
+                        typewriter3.classList.remove('hidden');
+    
+                        //third text
+                        typeWriter(typewriter3Text, typewriter3, () => {
+                            typewriter3.classList.add('hidden');
+                            typewriter1.classList.remove('hidden');
+                            startTypingSequence(); // Repeat 
+                        });
+                    });
+                });
+            }
+    
+            startTypingSequence();
+        });
+    </script>
+    
+    <style>
+        .typewriter-container p {
+            font-family: monospace;
+            overflow: hidden; 
+            border-right: 0.15em solid orange; 
+            white-space: nowrap; 
+            letter-spacing: 0.15em;
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: orange; }
+        }
+        
+        .typewriter-container p {
+            animation: blink-caret 0.75s step-end infinite;
+        }
+    </style>
+    
+    
+    
+    <!-- My image -->
+    <div class="flex items-center justify-center py-4">
+        <img id="profileImage" src="Image/me2.jpg" alt="Profile Image"
+            class="w-64 h-64 rounded-full object-cover transition-transform transition-opacity duration-500"
+            onmouseover="changeImage('Image/me1.jpg')" onmouseout="changeImage('Image/me2.jpg')">
+    </div>
+
+    <script>
+        function changeImage(src) {
+            const img = document.getElementById('profileImage');
+            img.classList.add('opacity-0', 'scale-90');
+            setTimeout(() => {
+                img.src = src;
+                img.classList.remove('opacity-0', 'scale-90');
+            }, 200);
+        }
+    </script>
+
+    <style>
+        /* Additional styles */
+        .transition-opacity {
+            transition: opacity 0.5s ease;
+        }
+
+        .transition-transform {
+            transition: transform 0.5s ease;
+        }
+
+        .scale-90 {
+            transform: scale(0.1);
+        }
+    </style>
+
+
+
+    <!-- CV -->
+    <div class="flex items-center justify-center py-2">
+        <a href="https://drive.google.com/file/d/1of57Tnnx7-IOqO0ts1AGm0SIGNc9BCf-/view?usp=drive_link"
+            class="mt-4 inline-block bg-yellow-400 text-blue-900 px-6 py-2 rounded shadow hover:bg-green-200"
+            title="Download CV"><b>DOWNLOAD CV</b></a>
+    </div>
+
+
+    <!-- About Section -->
+    <section class="text-center py-4">
+        <h1 class="text-4xl text-yellow-400 font-bold">About</h1>
+        <p class="text-2xl mt-4 font-bold">Sasindu Chandupa Abeysekara Jayawardana</p>
+        <h5 class="text-lg mt-2 text-black font-serif font-semibold italic w-full max-w-md text-center mx-auto">
+            A passionate Software Engineer from SriLanka
+        </h5>
+        <h5 class="text-lg text-black font-mono font-medium tracking-wide">I most like to <b>Front-End
+                developing</b>
+        </h5>
+
+        <p class="mt-4 font-serif">🌱 I’m currently learning Software Engineering <br> 👀 I’m interested in
+            Programming
+            <br> 💬 Ask
+            me about HTML, CSS, JAVA Swing <br> ⚡ Fun fact: Call me <b><i>Sasi</i></b>
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <h1 class="text-4xl text-yellow-400 font-bold text-center py-8">Skills</h1>
+    <section id="skills" class="text-center flex justify-center">
+        <div class="flex space-x-6 overflow-x-auto px-4">
+
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
+                <i class="fa-brands fa-html5 fa-3x"></i>
+                <p class="text-white mt-2">HTML</p>
+            </div>
+
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
+                <i class="fa-brands fa-css3 fa-3x"></i>
+                <p class="text-white mt-2">CSS</p>
+            </div>
+
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
+                <i class="fa-brands fa-php fa-3x"></i>
+                <p class="text-white mt-2">PHP</p>
+            </div>
+
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
+                <i class="fa-brands fa-java fa-3x"></i>
+                <p class="text-white mt-2">JAVA</p>
+            </div>
+
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
+                <i class="fa-brands fa-js fa-3x"></i>
+                <p class="text-white mt-2">Js</p>
+            </div>
+
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
+                <i class="fa-solid fa-database fa-3x"></i>
+                <p class="text-white mt-2">MySQL</p>
+            </div>
+
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
+                <i class="fa-brands fa-bootstrap fa-3x"></i>
+                <p class="text-white mt-2">Bootstrap</p>
+            </div>
+
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
+                <i class="fa-solid fa-c fa-3x"></i>
+                <p class="text-white mt-2">C C# C++</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <div class="min-h-[80vh] flex items-center justify-center mt-8">
+        <div class="bg-blue-300 p-5 rounded-lg shadow-lg w-full max-w-md">
+            <form action="https://formsubmit.co/scaj12345@gmail.com" method="POST" class="space-y-6">
+                <div>
+                    <label class="block text-black font-bold mb-2" for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="John De Silva"
+                        class="w-full px-4 py-2 rounded-lg bg-blue-900 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-black font-bold mb-2" for="email">Your email</label>
+                    <input type="email" name="email" id="email" placeholder="johnde@gmail.com"
+                        class="w-full px-4 py-2 rounded-lg bg-blue-900 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-black font-bold mb-2" for="subject">Subject</label>
+                    <input type="text" name="subject" id="subject" placeholder="Just say Hello...!"
+                        class="w-full px-4 py-2 rounded-lg bg-blue-900 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-black font-bold mb-2" for="message">Message</label>
+                    <textarea id="message" rows="4" name="message" placeholder="Let's talk about..."
+                        class="w-full px-4 py-2 rounded-lg bg-blue-900 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+                <div>
+                    <label class="block text-black font-bold mb-2" for="file">Project Sample (png,jpeg)</label>
+                    <input type="file" id="file" name="attachment" accept="image/png, image/jpeg"
+                        class="w-full px-4 py-2 border border-blue-500 text-gray-100 rounded-lg cursor-pointer focus:ring-2 focus:ring-blue-500">
+                </div>
+                <div>
+                    <button type="submit"
+                        class="w-full bg-blue-500 text-white font-bold py-2 rounded-lg hover:bg-blue-600 transition-colors">Submit</button>
+                </div>
+                <input type="hidden" name="_captcha" value="false">
+            </form>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="text-center mt-8 ">
+        <h1 class="text-4xl text-yellow-400 font-bold">Contact</h1>
+
+        <div
+            class="mt-6 flex justify-center space-x-6 bg-blue-400 p-6 rounded-lg shadow-lg border border-blue-800 max-w-md mx-auto overflow-hidden">
+            <!-- Added overflow-hidden to the container -->
+
+            <a href="https://github.com/SasinduChandupa" class="text-white hover:text-gray-400" title="github"> 
+                <i class="fa-brands fa-github fa-2xl"></i>
+            </a>
+            <a href="https://twitter.com/chandupa02" class="text-white hover:text-gray-400" title="X">
+                <i class="fa-brands fa-x-twitter fa-2xl"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/chandupa-jayawardana/" class="text-white hover:text-gray-400"
+                title="linkedin">
+                <i class="fa-brands fa-linkedin fa-2xl"></i>
+            </a>
+            <a href="https://www.instagram.com/chandupa._/" class="text-white hover:text-gray-400" title="instagram">
+                <i class="fa-brands fa-instagram fa-2xl"></i>
+            </a>
+            <a href="https://www.facebook.com/sasindu.chandupa?mibextid=ZbWKwL" class="text-white hover:text-gray-400"
+                title="facebook">
+                <i class="fa-brands fa-facebook fa-2xl"></i>
+            </a>
+            <a href="https://wa.me/94769773393" class="text-white hover:text-gray-400 underline" title="whatsapp">
+                <i class="fa-brands fa-whatsapp fa-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-black mt-6" id="footer">
+        <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left text-white">
+            <p class="flex-1 md:flex-none md:text-left pl-6 mt-4">Check me on social networks:</p>
+
+            <div class="mt-4 flex space-x-4 justify-center md:justify-end flex-1 pr-6">
+                <a href="https://www.facebook.com/sasindu.chandupa?mibextid=ZbWKwL"
+                    class="text-white hover:text-gray-400">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/chandupa02" class="text-white hover:text-gray-400">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/chandupa._/" class="text-white hover:text-gray-400">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="mt-4 flex flex-col md:flex-row justify-between items-center md:items-start text-center md:text-left">
+            <div class="px-4 md:px-16">
+                <h4 class="text-xl font-bold">Sasindu Chandupa</h4>
+                <p>If you want to create a front end for your website or any software, hire me.</p>
+            </div>
+            <ul class="mt-4 space-y-1 text-center md:text-left pr-4 md:pr-8">
+                <li><i class="fas fa-home"></i> No.192, Green View, Meepawala, Poddala</li>
+                <li><i class="fas fa-envelope"></i> scaj12345@gmail.com</li>
+                <li><i class="fas fa-phone"></i> +94 76 977 3393</li>
+            </ul>
+        </div>
+        
+
+        <div class="text-center mt-4 bg-gray-700">
+            © 2024 Copyright: <a href="http://sasinduchandupajayawardana.atwebpages.com/index.php" class="underline font-semibold">SasinduChandupa.com</a>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
