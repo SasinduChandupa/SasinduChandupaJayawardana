@@ -160,6 +160,10 @@
         ::-webkit-scrollbar-thumb:hover {
             background-color: #ffb74d;
         }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 
@@ -301,10 +305,49 @@
 
     <!-- CV -->
     <div class="flex items-center justify-center py-2">
-        <a href="https://drive.google.com/file/d/1of57Tnnx7-IOqO0ts1AGm0SIGNc9BCf-/view?usp=drive_link"
+        <!-- Download CV Button -->
+        <a id="downloadCvBtn" href="https://drive.google.com/file/d/1of57Tnnx7-IOqO0ts1AGm0SIGNc9BCf-/view?usp=drive_link"
             class="mt-4 inline-block bg-yellow-400 text-blue-900 px-6 py-2 rounded shadow hover:bg-green-200"
             title="Download CV"><b>DOWNLOAD CV</b></a>
+    
+        <!-- E-Certificate Button -->
+        <a id="eCertificateBtn" href="https://drive.google.com/drive/folders/1iV35YcNFy7KK1ZhnETOsuOrjtWEvzLzL?usp=drive_link"
+            class="mt-4 inline-block bg-gray-400 text-blue-900 px-6 py-2 rounded shadow hover:bg-red-200 hidden"
+            title="E-Certificate"><b>E-Certificates</b></a>
     </div>
+    
+    <!-- Arrow Buttons in a separate row -->
+    <div class="flex items-center justify-center py-2">
+        <button id="rightArrow" class="">
+            <i class="fas fa-arrow-right text-2xl"></i>
+        </button>
+    
+        <button id="leftArrow" class="hidden">
+            <i class="fas fa-arrow-left text-2xl"></i>
+        </button>
+    </div>
+    
+
+    <script>
+        const downloadCvBtn = document.getElementById('downloadCvBtn');
+        const eCertificateBtn = document.getElementById('eCertificateBtn');
+        const rightArrow = document.getElementById('rightArrow');
+        const leftArrow = document.getElementById('leftArrow');
+
+        rightArrow.addEventListener('click', () => {
+            downloadCvBtn.classList.add('hidden'); // Hide Download CV button
+            rightArrow.classList.add('hidden'); // Hide right arrow
+            eCertificateBtn.classList.remove('hidden'); // Show E-Certificate button
+            leftArrow.classList.remove('hidden'); // Show left arrow
+        });
+
+        leftArrow.addEventListener('click', () => {
+            eCertificateBtn.classList.add('hidden'); // Hide E-Certificate button
+            leftArrow.classList.add('hidden'); // Hide left arrow
+            downloadCvBtn.classList.remove('hidden'); // Show Download CV button
+            rightArrow.classList.remove('hidden'); // Show right arrow
+        });
+    </script>
 
 
     <!-- About Section -->
