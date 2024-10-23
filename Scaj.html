@@ -164,6 +164,42 @@
         .hidden {
             display: none;
         }
+
+        .scrollbar-hidden {
+            overflow-x: auto; 
+            scrollbar-width: none;
+        }
+
+        .scrollbar-hidden::-webkit-scrollbar {
+            display: none; 
+        }
+        @media (max-width: 640px) {
+            #chatbotModal .bg-gray-900 {
+                width: 90%;
+                max-width: 400px;
+            }
+            
+            #chatbotModal h2 {
+                font-size: 1.25rem;
+            }
+            
+            #chatbotModal .p-4 {
+                padding: 1rem;
+            }
+            
+            #chatBody {
+                height: 40vh;
+            }
+            
+            #userInput {
+                font-size: 0.9rem;
+            }
+            
+            #chatbotModal button {
+                font-size: 0.9rem;
+                padding: 0.5rem 1rem;
+            }
+        }
     </style>
 </head>
 
@@ -512,7 +548,7 @@
                 <p>If you want to create a front end for your website or any software, hire me.</p>
             </div>
             <ul class="mt-4 space-y-1 text-center md:text-left pr-4 md:pr-8">
-                <li><i class="fas fa-home"></i> No.192, Green View, Meepawala, Poddala</li>
+                <li><i class="fas fa-home"></i> Galle, SriLanka</li>
                 <li><i class="fas fa-envelope"></i> scaj12345@gmail.com</li>
                 <li><i class="fas fa-phone"></i> +94 76 977 3393</li>
             </ul>
@@ -524,6 +560,116 @@
         </div>
     </footer>
 
+    <!-- =====================================================    Chat Bot ============================================================ -->
+    <div class="fixed bottom-5 right-5">
+        <button onclick="openChatbot()">
+            <i class="fa-solid fa-robot fa-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Chatbot Modal -->
+    <div id="chatbotModal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-gray-900 w-96 rounded-lg shadow-lg border-2 border-white">
+            <div class="flex justify-between items-center bg-blue-900 text-white p-4 rounded-t-lg">
+                <h2 class="text-lg font-bold">How can I help you?</h2>
+                <button onclick="closeChatbot()" class="text-xl font-bold">&times;</button>
+            </div>
+            <div class="p-4 h-64 overflow-y-auto" id="chatBody">
+                <!-- Chat messages will appear here -->
+            </div>
+            <!-- Suggested Questions -->
+            <div class="p-1 border-t bg-gray-500 text-black" id="suggestions">
+                <p class="mb-2 font-bold">Try asking:</p>
+                <div class="flex space-x-2 overflow-x-auto w-full scrollbar-hidden">
+                    <button onclick="useSuggestion('hello')" class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">Hello</button>
+                    <button onclick="useSuggestion('full name')" class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">Full Name</button>
+                    <button onclick="useSuggestion('what is your purpose')" class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">What is your purpose?</button>
+                    <button onclick="useSuggestion('do you have any projects')" class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">Do you have any projects?</button>
+                    <button onclick="useSuggestion('how can I contact')" class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">How can I contact?</button>
+                    <button onclick="useSuggestion('do you offer services')" class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">Do you offer services?</button>
+                    <button onclick="useSuggestion('favorite programming language')" class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">Favorite Programming Language</button>
+                    <!-- Add more suggestions as needed -->
+                </div>
+            </div>
+            <div class="flex p-4 border-t">
+                <input type="text" id="userInput" class="flex-grow border rounded-lg p-2 bg-gray-400 text-black font-bold" placeholder="Type your message here...">
+                <button onclick="sendMessage()" class="ml-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+                    Send
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to open the chatbot modal
+        function openChatbot() {
+            document.getElementById('chatbotModal').classList.remove('hidden');
+        }
+
+        // Function to close the chatbot modal
+        function closeChatbot() {
+            document.getElementById('chatbotModal').classList.add('hidden');
+        }
+
+        // Predefined responses from the bot
+        const botResponses = {
+            "hello": "Hi there! How can I help you?",
+            "full name": "My name is Sasindu Chandupa Abesekara Jayawardana.",
+            "bye": "Goodbye! Have a great day!",
+            "how are you": "I'm just a bot, but I'm doing great! How about you?",
+            "what is your purpose": "I'm here to assist you with information about this website and answer your questions.",
+            "who created you": "I was created by Sasindu Chandupa to help visitors interact with the website.",
+            "what is this website about": "This website showcases projects, blogs, and tutorials related to web development and software engineering.",
+            "tell me a joke": "Why don't programmers like nature? It has too many bugs!",
+            "favorite programming language": "I think JavaScript is pretty cool, but I don't really have favorites!",
+            "how can I contact": "You can contact email directly at scaj12345@gmail.com.",
+            "do you offer services": "Yes, various services like web development, software engineering, and UI/UX design are available.",
+            "where are you located": "The website owner is located in Galle, Sri Lanka.",
+            "do you have any projects": "Yes! Check out the 'Contact' section 'Github' for details on various software and web development projects.",
+            "default": "I'm not sure what you mean. Could you rephrase that?"
+        };
+
+        // Function to use a suggestion
+        function useSuggestion(question) {
+            document.getElementById("userInput").value = question;
+            sendMessage();
+        }
+
+        // Function to send the user's message
+        function sendMessage() {
+            const userInput = document.getElementById("userInput").value;
+            if (userInput.trim() === "") {
+                return;
+            }
+
+            addMessageToChat("text-right text-blue-400", userInput);
+            document.getElementById("userInput").value = "";
+
+            // Bot response after a short delay
+            setTimeout(() => {
+                const botResponse = getBotResponse(userInput.toLowerCase());
+                addMessageToChat("text-left text-blue-100", botResponse);
+            }, 500);
+        }
+
+        // Function to get the bot's response
+        function getBotResponse(input) {
+            // Check if input matches any predefined responses
+            return botResponses[input] || botResponses["default"];
+        }
+
+        // Function to add a message to the chat body
+        function addMessageToChat(messageClass, message) {
+            const chatBody = document.getElementById("chatBody");
+            const messageElement = document.createElement("div");
+            messageElement.className = `my-2 ${messageClass}`;
+            messageElement.innerText = message;
+            chatBody.appendChild(messageElement);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+    </script>
+
+    <!-- ============================================================================================================================== -->
 
 </body>
 
