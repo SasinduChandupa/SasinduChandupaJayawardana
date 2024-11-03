@@ -200,6 +200,9 @@
                 padding: 0.5rem 1rem;
             }
         }
+
+        /* Skill panall */
+        
     </style>
 </head>
 
@@ -405,7 +408,7 @@
     </section>
 
     <!-- Skills Section -->
-    <h1 class="text-4xl text-yellow-400 font-bold text-center py-8">Skills</h1>
+    <h1 id="skills" class="text-4xl text-yellow-400 font-bold text-center py-8">Skills</h1>
     <section id="skills" class="text-center flex justify-center">
         <div class="flex space-x-6 overflow-x-auto px-4">
 
@@ -451,32 +454,81 @@
         </div>
     </section>
 
+    <!-- Skill bars -->
+    <div class="container mx-auto mt-5 py-4 ">
+        <div class="bar-1 w-4/5 mx-auto mb-6">
+            <div class="title text-lg font-bold" style="color: #ffffff;">HTML5</div>
+            <div class="bar bg-gray-400 h-9 rounded-lg relative overflow-hidden" data-width="95%">
+                <div class="bar-inner h-full rounded-l-lg" style="width: 0; background-color: #565657;"></div>
+                <div class="bar-percent absolute right-2 top-1 text-lg font-semibold text-white">95%</div>
+            </div>
+        </div>
+        <div class="bar-1 w-4/5 mx-auto mb-6">
+            <div class="title text-lg font-bold" style="color: #ffffff;">CSS3</div>
+            <div class="bar bg-gray-400 h-9 rounded-lg relative overflow-hidden" data-width="90%">
+                <div class="bar-inner h-full rounded-l-lg" style="width: 0; background-color: #5b5b74;"></div>
+                <div class="bar-percent absolute right-2 top-1 text-lg font-semibold text-white">90%</div>
+            </div>
+        </div>
+        <div class="bar-1 w-4/5 mx-auto mb-6">
+            <div class="title text-lg font-bold" style="color: #ffffff;">Java Script</div>
+            <div class="bar bg-gray-400 h-9 rounded-lg relative overflow-hidden" data-width="85%">
+                <div class="bar-inner h-full rounded-l-lg" style="width: 0; background-color: #878794;"></div>
+                <div class="bar-percent absolute right-2 top-1 text-lg font-semibold text-white">85%</div>
+            </div>
+        </div>
+        <div class="bar-1 w-4/5 mx-auto mb-6">
+            <div class="title text-lg font-bold" style="color: #ffffff">PHP</div>
+            <div class="bar bg-gray-400 h-9 rounded-lg relative overflow-hidden" data-width="70%">
+                <div class="bar-inner h-full rounded-l-lg" style="width: 0; background-color: #938fcc;"></div>
+                <div class="bar-percent absolute right-2 top-1 text-lg font-semibold text-white">70%</div>
+            </div>
+        </div>
+        <div class="bar-1 w-4/5 mx-auto mb-6">
+            <div class="title text-lg font-bold" style="color: #ffffff">JAVA / JAVA swing</div>
+            <div class="bar bg-gray-400 h-9 rounded-lg relative overflow-hidden" data-width="60%">
+                <div class="bar-inner h-full rounded-l-lg" style="width: 0; background-color: #3c3c5e;"></div>
+                <div class="bar-percent absolute right-2 top-1 text-lg font-semibold text-white">60%</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(".bar").each(function(){
+            $(this).find(".bar-inner").animate({
+                width: $(this).attr("data-width")
+            }, 2000);
+            });
+        });
+    </script>
+    
+
     <!-- Form -->
     <div class="min-h-[80vh] flex items-center justify-center mt-8">
-        <div class="bg-blue-300 p-5 rounded-lg shadow-lg w-full max-w-md">
+        <div class=" p-5 rounded-lg shadow-lg w-full max-w-md">
             <form action="https://formsubmit.co/scaj12345@gmail.com" method="POST" class="space-y-6">
                 <div>
-                    <label class="block text-black font-bold mb-2" for="name">Name</label>
+                    <label class="block text-white font-bold mb-2" for="name">- Name</label>
                     <input type="text" name="name" id="name" placeholder="John De Silva"
                         class="w-full px-4 py-2 rounded-lg bg-blue-900 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div>
-                    <label class="block text-black font-bold mb-2" for="email">Your email</label>
+                    <label class="block text-white font-bold mb-2" for="email">- Your email</label>
                     <input type="email" name="email" id="email" placeholder="johnde@gmail.com"
                         class="w-full px-4 py-2 rounded-lg bg-blue-900 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div>
-                    <label class="block text-black font-bold mb-2" for="subject">Subject</label>
+                    <label class="block text-white font-bold mb-2" for="subject">- Subject</label>
                     <input type="text" name="subject" id="subject" placeholder="Just say Hello...!"
                         class="w-full px-4 py-2 rounded-lg bg-blue-900 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div>
-                    <label class="block text-black font-bold mb-2" for="message">Message</label>
+                    <label class="block text-white font-bold mb-2" for="message">- Message</label>
                     <textarea id="message" rows="4" name="message" placeholder="Let's talk about..."
                         class="w-full px-4 py-2 rounded-lg bg-blue-900 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-blue-500"></textarea>
                 </div>
                 <div>
-                    <label class="block text-black font-bold mb-2" for="file">Project Sample (png,jpeg)</label>
+                    <label class="block text-white font-bold mb-2" for="file">- Project Sample (png,jpeg)</label>
                     <input type="file" id="file" name="attachment" accept="image/png, image/jpeg"
                         class="w-full px-4 py-2 border border-blue-500 text-gray-100 rounded-lg cursor-pointer focus:ring-2 focus:ring-blue-500">
                 </div>
