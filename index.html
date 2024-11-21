@@ -10,150 +10,172 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
-    
+
     <script src="script.js"></script>
     <style>
-       * {
-        margin: 0;
-        padding: 0;
+        * {
+            margin: 0;
+            padding: 0;
         }
+
         .wrapper {
-        height: 100%;
-        width: 100%;
-        background: linear-gradient(180deg, #04fafd, 5%, #5f60b9, 50%, #010433);
-        position:fixed;
-        z-index: -1;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(180deg, #b9b9b9, 5%, #676768, 50%, #171718);
+            position: fixed;
+            z-index: -1;
         }
+
         .wrapper h1 {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        position: absolute;
-        font-family: sans-serif;
-        letter-spacing: 1px;
-        word-spacing: 2px;
-        color: #fff;
-        font-size: 40px;
-        font-weight: 888;
-        text-transform: uppercase;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            font-family: sans-serif;
+            letter-spacing: 1px;
+            word-spacing: 2px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: 888;
+            text-transform: uppercase;
         }
+
         .wrapper div {
-        height: 60px;
-        width: 60px;
-        border: 2px solid rgba(255, 255, 255, 0.7);
-        border-radius: 50px;
-        position: absolute;
-        top: 10%;
-        left: 10%;
-        animation: 4s linear infinite;
+            height: 60px;
+            width: 60px;
+            border: 2px solid rgba(255, 255, 255, 0.7);
+            border-radius: 50px;
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            animation: 4s linear infinite;
         }
+
         div .dot {
-        height: 10px;
-        width: 10px;
-        border-radius: 50px;
-        background: rgba(255, 255, 255, 0.5);
-        position: absolute;
-        top: 20%;
-        right: 20%;
+            height: 10px;
+            width: 10px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.5);
+            position: absolute;
+            top: 20%;
+            right: 20%;
         }
+
         .wrapper div:nth-child(1) {
-        top: 20%;
-        left: 20%;
-        animation: animate 8s linear infinite;
+            top: 20%;
+            left: 20%;
+            animation: animate 8s linear infinite;
         }
+
         .wrapper div:nth-child(2) {
-        top: 60%;
-        left: 80%;
-        animation: animate 10s linear infinite;
+            top: 60%;
+            left: 80%;
+            animation: animate 10s linear infinite;
         }
+
         .wrapper div:nth-child(3) {
-        top: 40%;
-        left: 40%;
-        animation: animate 3s linear infinite;
+            top: 40%;
+            left: 40%;
+            animation: animate 3s linear infinite;
         }
+
         .wrapper div:nth-child(4) {
-        top: 66%;
-        left: 30%;
-        animation: animate 7s linear infinite;
+            top: 66%;
+            left: 30%;
+            animation: animate 7s linear infinite;
         }
+
         .wrapper div:nth-child(5) {
-        top: 90%;
-        left: 10%;
-        animation: animate 9s linear infinite;
+            top: 90%;
+            left: 10%;
+            animation: animate 9s linear infinite;
         }
+
         .wrapper div:nth-child(6) {
-        top: 30%;
-        left: 60%;
-        animation: animate 5s linear infinite;
+            top: 30%;
+            left: 60%;
+            animation: animate 5s linear infinite;
         }
+
         .wrapper div:nth-child(7) {
-        top: 70%;
-        left: 20%;
-        animation: animate 8s linear infinite;
+            top: 70%;
+            left: 20%;
+            animation: animate 8s linear infinite;
         }
+
         .wrapper div:nth-child(8) {
-        top: 75%;
-        left: 60%;
-        animation: animate 10s linear infinite;
+            top: 75%;
+            left: 60%;
+            animation: animate 10s linear infinite;
         }
+
         .wrapper div:nth-child(9) {
-        top: 50%;
-        left: 50%;
-        animation: animate 6s linear infinite;
+            top: 50%;
+            left: 50%;
+            animation: animate 6s linear infinite;
         }
+
         .wrapper div:nth-child(10) {
-        top: 45%;
-        left: 20%;
-        animation: animate 10s linear infinite;
+            top: 45%;
+            left: 20%;
+            animation: animate 10s linear infinite;
         }
+
         .wrapper div:nth-child(11) {
-        top: 10%;
-        left: 90%;
-        animation: animate 9s linear infinite;
+            top: 10%;
+            left: 90%;
+            animation: animate 9s linear infinite;
         }
+
         .wrapper div:nth-child(12) {
-        top: 20%;
-        left: 70%;
-        animation: animate 7s linear infinite;
+            top: 20%;
+            left: 70%;
+            animation: animate 7s linear infinite;
         }
+
         .wrapper div:nth-child(13) {
-        top: 20%;
-        left: 20%;
-        animation: animate 8s linear infinite;
+            top: 20%;
+            left: 20%;
+            animation: animate 8s linear infinite;
         }
+
         .wrapper div:nth-child(14) {
-        top: 60%;
-        left: 5%;
-        animation: animate 6s linear infinite;
+            top: 60%;
+            left: 5%;
+            animation: animate 6s linear infinite;
         }
+
         .wrapper div:nth-child(15) {
-        top: 90%;
-        left: 80%;
-        animation: animate 9s linear infinite;
+            top: 90%;
+            left: 80%;
+            animation: animate 9s linear infinite;
         }
+
         @keyframes animate {
-        0% {
-            transform: scale(0) translateY(0) rotate(70deg);
-        }
-        100% {
-            transform: scale(1.3) translateY(-100px) rotate(360deg);
-        }
+            0% {
+                transform: scale(0) translateY(0) rotate(70deg);
+            }
+
+            100% {
+                transform: scale(1.3) translateY(-100px) rotate(360deg);
+            }
         }
 
         /* scroll bar */
         ::-webkit-scrollbar {
             width: 10px;
         }
+
         ::-webkit-scrollbar-track {
-            background: #1e1e2f;
+            background: #121213;
             border-radius: 10px;
         }
+
         ::-webkit-scrollbar-thumb {
-            background-color: #1349bd;
-            border-radius: 10px; 
+            background-color: #b9b9b9;
+            border-radius: 10px;
             border: 2px solid #1e1e2f;
         }
 
@@ -166,35 +188,41 @@
         }
 
         .scrollbar-hidden {
-            overflow-x: auto; 
+            overflow-x: auto;
             scrollbar-width: none;
         }
 
         .scrollbar-hidden::-webkit-scrollbar {
-            display: none; 
+            display: none;
         }
+
+        .font-righteous {
+            font-family: 'Righteous', cursive;
+        }
+
+
         @media (max-width: 640px) {
             #chatbotModal .bg-gray-900 {
                 width: 90%;
                 max-width: 400px;
             }
-            
+
             #chatbotModal h2 {
                 font-size: 1.25rem;
             }
-            
+
             #chatbotModal .p-4 {
                 padding: 1rem;
             }
-            
+
             #chatBody {
                 height: 40vh;
             }
-            
+
             #userInput {
                 font-size: 0.9rem;
             }
-            
+
             #chatbotModal button {
                 font-size: 0.9rem;
                 padding: 0.5rem 1rem;
@@ -202,7 +230,6 @@
         }
 
         /* Skill panall */
-        
     </style>
 </head>
 
@@ -226,7 +253,7 @@
     </div>
 
     <!-- Navbar -->
-    <nav class="flex justify-center items-center p-4 bg-gray-700 w-full">
+    <nav class="flex justify-center items-center p-4 bg-black/40 w-full">
         <ul class="flex space-x-6 md:space-x-12 text-lg md:text-xl font-medium">
             <li id="l1"><a class="hover:text-gray-300" href="#home">Home</a></li>
             <li id="l2"><a class="hover:text-gray-300" href="#footer">About</a></li>
@@ -239,8 +266,11 @@
     <section class="text-center ">
         <div id="typewriter" class="text-2xl font-bold"></div>
         <div class="mt-6">
-            <h1 class="font-bold text-4xl">I'm <span style="background: linear-gradient(to right, orange, yellow); -webkit-background-clip: text; color: transparent;">SASINDU CHANDUPA</span></h1>
-            <p class="mt-4 text-lg font-semibold">I'm a Software Engineering undergraduate student at NIBM GALLE campus. I love developing responsive web pages</p>
+            <h1 class="font-bold text-4xl">I'm <span
+                    style="background: linear-gradient(to right, orange, yellow); -webkit-background-clip: text; color: transparent;">SASINDU
+                    CHANDUPA</span></h1>
+            <p class="mt-4 text-lg font-semibold">I'm a Software Engineering undergraduate student at NIBM GALLE campus.
+                I love developing responsive web pages</p>
         </div>
     </section>
 
@@ -250,46 +280,46 @@
         <p class="typewriter-2 text-lg font-semibold text-gray-900 hidden text-4xl font-bold"></p>
         <p class="typewriter-3 text-lg font-semibold text-gray-900 hidden text-4xl font-bold"></p>
     </div>
-    
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const typewriter1Text = "Most Interest";
             const typewriter2Text = "Front-end Developing";
             const typewriter3Text = "UI/UX Designing";
-            
+
             const typewriter1 = document.querySelector('.typewriter-1');
             const typewriter2 = document.querySelector('.typewriter-2');
             const typewriter3 = document.querySelector('.typewriter-3');
-    
+
             let index = 0;
-    
+
             function typeWriter(text, element, callback) {
                 if (index < text.length) {
                     element.innerHTML += text.charAt(index);
                     index++;
-                    setTimeout(() => typeWriter(text, element, callback), 100); 
+                    setTimeout(() => typeWriter(text, element, callback), 100);
                 } else {
                     index = 0;
                     setTimeout(callback, 1000);
                 }
             }
-    
+
             function startTypingSequence() {
                 // Clear all paragraphs before starting a new cycle
                 typewriter1.innerHTML = '';
                 typewriter2.innerHTML = '';
                 typewriter3.innerHTML = '';
-    
+
                 //first text
                 typeWriter(typewriter1Text, typewriter1, () => {
                     typewriter1.classList.add('hidden');
                     typewriter2.classList.remove('hidden');
-    
+
                     // second text
                     typeWriter(typewriter2Text, typewriter2, () => {
                         typewriter2.classList.add('hidden');
                         typewriter3.classList.remove('hidden');
-    
+
                         //third text
                         typeWriter(typewriter3Text, typewriter3, () => {
                             typewriter3.classList.add('hidden');
@@ -299,11 +329,11 @@
                     });
                 });
             }
-    
+
             startTypingSequence();
         });
     </script>
-    
+
     <!-- My image -->
     <div class="flex items-center justify-center py-4">
         <img id="profileImage" src="Image/me2.jpg" alt="Profile Image"
@@ -335,68 +365,262 @@
         .scale-90 {
             transform: scale(0.1);
         }
+
+        /* btn */
+        @import url("https://fonts.googleapis.com/css?family=Raleway");
+
+        :root {
+            --glow-color: hsl(52, 19%, 84%);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        .glowing-btn {
+            position: relative;
+            cursor: pointer;
+            padding: 0.5em 0.5em;
+            padding-right: 1em;
+            border: 0.15em solid var(--glow-color);
+            border-radius: 0.45em;
+            background: none;
+            font-family: "Raleway", sans-serif;
+            font-size: 1em;
+            font-weight: 900;
+            letter-spacing: 0.2em;
+
+            -webkit-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+                0px 0px 0.5em 0px var(--glow-color);
+            -moz-box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+                0px 0px 0.5em 0px var(--glow-color);
+            box-shadow: inset 0px 0px 0.5em 0px var(--glow-color),
+                0px 0px 0.5em 0px var(--glow-color);
+            animation: border-flicker 2s linear infinite;
+        }
+
+        .glowing-txt {
+            float: left;
+            margin-right: -0.8em;
+            -webkit-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+                0 0 0.45em var(--glow-color);
+            -moz-text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3),
+                0 0 0.45em var(--glow-color);
+            text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.45em var(--glow-color);
+            animation: text-flicker 3s linear infinite;
+        }
+
+        .faulty-letter {
+            opacity: 0.5;
+            animation: faulty-flicker 2s linear infinite;
+        }
+
+        .glowing-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0.7;
+            filter: blur(1em);
+            transform: translateY(120%) rotateX(95deg) scale(1, 0.35);
+            background: var(--glow-color);
+            pointer-events: none;
+        }
+
+        .glowing-btn::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            z-index: -1;
+            background-color: var(--glow-color);
+            box-shadow: 0 0 2em 0.2em var(--glow-color);
+            transition: opacity 100ms linear;
+        }
+
+        .glowing-btn:hover {
+            color: rgba(0, 0, 0, 0.8);
+            text-shadow: none;
+            animation: none;
+        }
+
+        .glowing-btn:hover .glowing-txt {
+            animation: none;
+        }
+
+        .glowing-btn:hover .faulty-letter {
+            animation: none;
+            text-shadow: none;
+            opacity: 1;
+        }
+
+        .glowing-btn:hover:before {
+            filter: blur(1.5em);
+            opacity: 1;
+        }
+
+        .glowing-btn:hover:after {
+            opacity: 1;
+        }
+
+        @keyframes faulty-flicker {
+            0% {
+                opacity: 0.1;
+            }
+
+            2% {
+                opacity: 0.1;
+            }
+
+            4% {
+                opacity: 0.5;
+            }
+
+            19% {
+                opacity: 0.5;
+            }
+
+            21% {
+                opacity: 0.1;
+            }
+
+            23% {
+                opacity: 1;
+            }
+
+            80% {
+                opacity: 0.5;
+            }
+
+            83% {
+                opacity: 0.4;
+            }
+
+            87% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes text-flicker {
+            0% {
+                opacity: 0.1;
+            }
+
+            2% {
+                opacity: 1;
+            }
+
+            8% {
+                opacity: 0.1;
+            }
+
+            9% {
+                opacity: 1;
+            }
+
+            12% {
+                opacity: 0.1;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            25% {
+                opacity: 0.3;
+            }
+
+            30% {
+                opacity: 1;
+            }
+
+            70% {
+                opacity: 0.7;
+            }
+
+            72% {
+                opacity: 0.2;
+            }
+
+            77% {
+                opacity: 0.9;
+            }
+
+            100% {
+                opacity: 0.9;
+            }
+        }
+
+        @keyframes border-flicker {
+            0% {
+                opacity: 0.1;
+            }
+
+            2% {
+                opacity: 1;
+            }
+
+            4% {
+                opacity: 0.1;
+            }
+
+            8% {
+                opacity: 1;
+            }
+
+            70% {
+                opacity: 0.7;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .glowing-btn {
+                font-size: 1em;
+            }
+        }
     </style>
 
-
-
     <!-- CV -->
-    <div class="flex items-center justify-center py-2">
+    <div class="flex items-center justify-center py-2 gap-4 px-2">
         <!-- Download CV Button -->
         <a id="downloadCvBtn" href="https://drive.google.com/file/d/1eYz5re4NsqaKchu9TOT9Kzs7zza_G8Q-/view?usp=sharing"
-            class="mt-4 inline-block bg-yellow-400 text-blue-900 px-6 py-2 rounded shadow hover:bg-green-200"
-            title="Download CV"><b>DOWNLOAD CV</b></a>
-    
+            class="inline-block"
+            title="Download CV"><button class='glowing-btn'><span class='glowing-txt'>Down<span class='faulty-letter'>load</span> CV</span></button></a>
+
         <!-- E-Certificate Button -->
-        <a id="eCertificateBtn" href="https://drive.google.com/drive/folders/1iV35YcNFy7KK1ZhnETOsuOrjtWEvzLzL?usp=drive_link"
-            class="mt-4 inline-block bg-gray-400 text-blue-900 px-6 py-2 rounded shadow hover:bg-red-200 hidden"
-            title="E-Certificate"><b>E-Certificates</b></a>
+        <a id="eCertificateBtn"
+            href="https://drive.google.com/drive/folders/1iV35YcNFy7KK1ZhnETOsuOrjtWEvzLzL?usp=drive_link"
+            class="inline-block bg-gray-400 text-black"
+            title="E-Certificate"><button class='glowing-btn'><span class='glowing-txt'>Cer<span class='faulty-letter'>tifi</span>cate</span></button></a>
     </div>
-    
-    <!-- Arrow Buttons in a separate row -->
-    <div class="flex items-center justify-center py-2">
-        <button id="rightArrow" class="">
-            <i class="fas fa-arrow-right text-2xl"></i>
-        </button>
-    
-        <button id="leftArrow" class="hidden">
-            <i class="fas fa-arrow-left text-2xl"></i>
-        </button>
-    </div>
-    
-
-    <script>
-        const downloadCvBtn = document.getElementById('downloadCvBtn');
-        const eCertificateBtn = document.getElementById('eCertificateBtn');
-        const rightArrow = document.getElementById('rightArrow');
-        const leftArrow = document.getElementById('leftArrow');
-
-        rightArrow.addEventListener('click', () => {
-            downloadCvBtn.classList.add('hidden'); // Hide Download CV button
-            rightArrow.classList.add('hidden'); // Hide right arrow
-            eCertificateBtn.classList.remove('hidden'); // Show E-Certificate button
-            leftArrow.classList.remove('hidden'); // Show left arrow
-        });
-
-        leftArrow.addEventListener('click', () => {
-            eCertificateBtn.classList.add('hidden'); // Hide E-Certificate button
-            leftArrow.classList.add('hidden'); // Hide left arrow
-            downloadCvBtn.classList.remove('hidden'); // Show Download CV button
-            rightArrow.classList.remove('hidden'); // Show right arrow
-        });
-    </script>
 
 
     <!-- About Section -->
     <section class="text-center py-4">
         <h1 class="text-4xl text-yellow-400 font-bold">About</h1>
-        <p class="text-2xl mt-4 font-bold">Sasindu Chandupa Abeysekara Jayawardana</p>
-        <h5 class="text-lg mt-2 text-black font-serif font-semibold italic w-full max-w-md text-center mx-auto">
+        <p class="text-2xl mt-4 font-bold font-righteous">Sasindu Chandupa Abeysekara Jayawardana</p>
+        <h5 class="text-lg mt-2 text-gray-300 font-serif font-semibold italic w-full max-w-md text-center mx-auto">
             A passionate Software Engineer from SriLanka
         </h5>
-        <h5 class="text-lg text-black font-mono font-medium tracking-wide">I most like to <b>Front-End
+        <h5 class="text-lg text-gray-300 font-mono font-medium tracking-wide">I most like to <b>Front-End
                 developing</b>
         </h5>
-
+        <p><br></p>
+        <div class="flex justify-center">
+            <hr class="w-64 border-gray-300 border-t-2">
+        </div>
+        
         <p class="mt-4 font-serif">🌱 I’m currently learning Software Engineering <br> 👀 I’m interested in
             Programming
             <br> 💬 Ask
@@ -409,44 +633,44 @@
     <section id="skills" class="text-center flex justify-center">
         <div class="flex space-x-6 overflow-x-auto px-4">
 
-            <div class="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
+            <div class="bg-black/60 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
                 <i class="fa-brands fa-html5 fa-3x"></i>
                 <p class="text-white mt-2">HTML</p>
             </div>
 
-            <div class="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
+            <div class="bg-black/60 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
                 <i class="fa-brands fa-css3 fa-3x"></i>
                 <p class="text-white mt-2">CSS</p>
             </div>
 
-            <div class="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
+            <div class="bg-black/60 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
                 <i class="fa-brands fa-php fa-3x"></i>
                 <p class="text-white mt-2">PHP</p>
             </div>
 
-            <div class="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
+            <div class="bg-black/60 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
                 <i class="fa-brands fa-java fa-3x"></i>
                 <p class="text-white mt-2">JAVA</p>
             </div>
 
-            <div class="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
+            <div class="bg-black/60 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
                 <i class="fa-brands fa-js fa-3x"></i>
                 <p class="text-white mt-2">Js</p>
             </div>
 
-            <div class="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
+            <div class="bg-black/60 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
                 <i class="fa-solid fa-database fa-3x"></i>
                 <p class="text-white mt-2">MySQL</p>
             </div>
 
-            <div class="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
+            <div class="bg-black/60 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
                 <i class="fa-brands fa-bootstrap fa-3x"></i>
                 <p class="text-white mt-2">Bootstrap</p>
             </div>
 
-            <div class="bg-gray-900 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
+            <div class="bg-black/60 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36">
                 <i class="fa-solid fa-c fa-3x"></i>
-                <p class="text-white mt-2">C C# C++</p>
+                <p class="text-white mt-2">C / C# / C++</p>
             </div>
         </div>
     </section>
@@ -455,65 +679,138 @@
     <div class="container mx-auto mt-5 py-4 ">
         <div class="bar-1 w-4/5 mx-auto mb-6">
             <div class="title text-lg font-bold" style="color: #ffffff;">HTML5</div>
-            <div class="bar bg-gray-400 h-9 rounded-lg relative overflow-hidden border-2 border-blue-200" data-width="95%">
-                <div class="bar-inner h-full rounded-l-lg" style="width: 0; background-color: #03033b;"></div>
+            <div class="bar bg-white/20 h-9 rounded-lg relative overflow-hidden border-2 border-blue-200"
+                data-width="95%">
+                <div class="bar-inner h-full rounded-l-lg" style="width: 0; background-color: #302d03;"></div>
                 <div class="bar-percent absolute right-2 top-1 text-lg font-semibold text-white">95%</div>
             </div>
         </div>
         <div class="bar-1 w-4/5 mx-auto mb-6">
             <div class="title text-lg font-bold" style="color: #ffffff;">CSS3</div>
-            <div class="bar bg-gray-400 h-9 rounded-lg relative overflow-hidden border-2 border-blue-200" data-width="90%">
-                <div class="bar-inner h-full rounded-l-lg" style="width: 0; background-color: #08085f;"></div>
+            <div class="bar bg-white/20 h-9 rounded-lg relative overflow-hidden border-2 border-blue-200"
+                data-width="90%">
+                <div class="bar-inner h-full rounded-l-lg" style="width: 0; background-color: #4e4a0f;"></div>
                 <div class="bar-percent absolute right-2 top-1 text-lg font-semibold text-white">90%</div>
             </div>
         </div>
         <div class="bar-1 w-4/5 mx-auto mb-6">
             <div class="title text-lg font-bold" style="color: #ffffff;">Java Script</div>
-            <div class="bar bg-gray-400 h-9 rounded-lg relative overflow-hidden border-2 border-blue-200" data-width="85%">
-                <div class="bar-inner h-full rounded-l-lg" style="width: 0; background-color: #0a0a96;"></div>
+            <div class="bar bg-white/20 h-9 rounded-lg relative overflow-hidden border-2 border-blue-200"
+                data-width="85%">
+                <div class="bar-inner h-full rounded-l-lg" style="width: 0; background-color: #888122;"></div>
                 <div class="bar-percent absolute right-2 top-1 text-lg font-semibold text-white">85%</div>
             </div>
         </div>
         <div class="bar-1 w-4/5 mx-auto mb-6">
             <div class="title text-lg font-bold" style="color: #ffffff">PHP</div>
-            <div class="bar bg-gray-400 h-9 rounded-lg relative overflow-hidden border-2 border-blue-200" data-width="80%">
-                <div class="bar-inner h-full rounded-l-lg" style="width: 0; background-color: #4f4fd4;"></div>
+            <div class="bar bg-white/20 h-9 rounded-lg relative overflow-hidden border-2 border-blue-200"
+                data-width="80%">
+                <div class="bar-inner h-full rounded-l-lg" style="width: 0; background-color: #999b35;"></div>
                 <div class="bar-percent absolute right-2 top-1 text-lg font-semibold text-white">80%</div>
             </div>
         </div>
         <div class="bar-1 w-4/5 mx-auto mb-6">
             <div class="title text-lg font-bold" style="color: #ffffff">JAVA / JAVA swing</div>
-            <div class="bar bg-gray-400 h-9 rounded-lg relative overflow-hidden border-2 border-blue-200" data-width="70%">
-                <div class="bar-inner h-full rounded-l-lg" style="width: 0; background-color: #8585ee;"></div>
+            <div class="bar bg-white/20 h-9 rounded-lg relative overflow-hidden border-2 border-blue-200"
+                data-width="70%">
+                <div class="bar-inner h-full rounded-l-lg" style="width: 0; background-color: #c7c67f;"></div>
                 <div class="bar-percent absolute right-2 top-1 text-lg font-semibold text-white">70%</div>
             </div>
         </div>
     </div>
     <script>
-        $(document).ready(function(){
-            $(".bar").each(function(){
-            $(this).find(".bar-inner").animate({
-                width: $(this).attr("data-width")
-            }, 2000);
+        $(document).ready(function () {
+            $(".bar").each(function () {
+                $(this).find(".bar-inner").animate({
+                    width: $(this).attr("data-width")
+                }, 2000);
             });
         });
     </script>
 
+    <!-- My projects -->
+    <section class="py-12 px-4 sm:px-6 md:px-80">
+        <h1 id="skills" class="text-4xl text-yellow-400 font-bold text-center py-8">My projects</h1>
+        <!-- Container with horizontal scrolling on mobile -->
+        <div class="flex sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-auto sm:overflow-visible">
+            <!-- Destination 1 -->
+            <div
+                class="border border-white bg-white/10 flex-shrink-0 w-64 sm:w-auto rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="Image/hungryme.png" alt="Switzerland" class="w-full h-48 sm:h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-300 text-white">HungryMe</h3>
+                    <p class="text-sm sm:text-base text-gray-300 mt-2">
+                        Final Project of University Diploma Level / food ordering System <br><i
+                            class="text-gray-400">Technologies - HTML, PHP, Js</i>
+                    </p>
+                    <a href="https://github.com/SasinduChandupa/HungryMe-Git.git"
+                        class="text-blue-500 mt-4 inline-block hover:underline">
+                        Github &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Destination 2 -->
+            <div
+                class="border border-white bg-white/10 flex-shrink-0 w-64 sm:w-auto rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="Image/moneyBank.png" alt="Singapore" class="w-full h-48 sm:h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-300">MoneyBank</h3>
+                    <p class="text-sm sm:text-base text-gray-300 mt-2">
+                        Banking System for the Admin panal & customers <br><i class="text-gray-400">Technologies - JAVA,
+                            Java Swing</i>
+                    </p>
+                    <a href="https://github.com/SasinduChandupa/MoneyBank_JAVA.git"
+                        class="text-blue-500 mt-4 inline-block hover:underline">
+                        Github &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- Destination 3 -->
+            <div
+                class="border border-white bg-white/10 flex-shrink-0 w-64 sm:w-auto rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="Image/furnitu.png" alt="Dubai" class="w-full h-48 sm:h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-300">Furniture Lanka</h3>
+                    <p class="text-sm sm:text-base text-gray-300 mt-2">
+                        This is our university Web Application Development (WAD) module CW <br><i
+                            class="text-gray-400">Technologies - HTML, PHP, CSS, Js, MySQL</i>
+                    </p>
+                    <a href="https://github.com/SasinduChandupa/FurnitureLanka-WAD_University_CW.git"
+                        class="text-blue-500 mt-4 inline-block hover:underline">
+                        Github &rarr;
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <!-- Certificate -->
     <div class="flex items-center justify-center mt-8">
         <div class="p-5 rounded-lg shadow-lg w-full max-w-md border border-white bg-black/30">
-            <h2 class="font-bold text-2xl text-center text-white text-yellow-500" style="line-height: 2.0;">Main Certificate I earned</h2>
+            <h2 class="font-bold text-2xl text-center text-white text-yellow-500" style="line-height: 2.0;">Main
+                Certificate I earned</h2>
             <ol style="list-style-type: square; padding-left: 1.5rem;;">
-                <li style="line-height: 1.8;"><span style="font-weight: bold; background: linear-gradient(to right, rgb(255, 124, 1), rgb(251, 255, 6)); -webkit-background-clip: text; color: transparent;">API Fundamentals</span> Postman Student Expert</li>
-                <li style="line-height: 1.8;"><span style="font-weight: bold; background: linear-gradient(to right, rgb(255, 124, 1), rgb(251, 255, 6)); -webkit-background-clip: text; color: transparent;">Ftot-end development</span> by CODL University of Moratuwa</li>
-                <li style="line-height: 1.8;"><span style="font-weight: bold; background: linear-gradient(to right, rgb(255, 124, 1), rgb(251, 255, 6)); -webkit-background-clip: text; color: transparent;">Web design for beginers</span> by CODL University of Moratuwa</li>
-                <li style="line-height: 1.8;"><span style="font-weight: bold; background: linear-gradient(to right, rgb(255, 124, 1), rgb(251, 255, 6)); -webkit-background-clip: text; color: transparent;">NASA Open Science Badge</span> by NASA</li>
+                <li style="line-height: 1.8;"><span
+                        style="font-weight: bold; background: linear-gradient(to right, rgb(255, 124, 1), rgb(251, 255, 6)); -webkit-background-clip: text; color: transparent;">API
+                        Fundamentals</span> Postman Student Expert</li>
+                <li style="line-height: 1.8;"><span
+                        style="font-weight: bold; background: linear-gradient(to right, rgb(255, 124, 1), rgb(251, 255, 6)); -webkit-background-clip: text; color: transparent;">Ftot-end
+                        development</span> by CODL University of Moratuwa</li>
+                <li style="line-height: 1.8;"><span
+                        style="font-weight: bold; background: linear-gradient(to right, rgb(255, 124, 1), rgb(251, 255, 6)); -webkit-background-clip: text; color: transparent;">Web
+                        design for beginers</span> by CODL University of Moratuwa</li>
+                <li style="line-height: 1.8;"><span
+                        style="font-weight: bold; background: linear-gradient(to right, rgb(255, 124, 1), rgb(251, 255, 6)); -webkit-background-clip: text; color: transparent;">NASA
+                        Open Science Badge</span> by NASA</li>
             </ol>
         </div>
     </div>
-    
-    
-    
+
+
+
     <!-- Form -->
     <div class="min-h-[80vh] flex items-center justify-center mt-8">
         <div class="p-5 rounded-lg shadow-lg w-full max-w-md border border-white bg-white/10">
@@ -523,31 +820,31 @@
                 <div>
                     <label class="block text-white font-bold mb-2" for="name">- Name</label>
                     <input type="text" name="name" id="name" placeholder="John De Silva"
-                        class="w-full px-4 py-2 rounded-lg bg-blue-900 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-blue-500">
+                        class="w-full px-4 py-2 rounded-lg bg-black/30 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div>
                     <label class="block text-white font-bold mb-2" for="email">- Your email</label>
                     <input type="email" name="email" id="email" placeholder="johnde@gmail.com"
-                        class="w-full px-4 py-2 rounded-lg bg-blue-900 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-blue-500">
+                        class="w-full px-4 py-2 rounded-lg bg-black/30 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div>
                     <label class="block text-white font-bold mb-2" for="subject">- Subject</label>
                     <input type="text" name="subject" id="subject" placeholder="Just say Hello...!"
-                        class="w-full px-4 py-2 rounded-lg bg-blue-900 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-blue-500">
+                        class="w-full px-4 py-2 rounded-lg bg-black/30 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div>
                     <label class="block text-white font-bold mb-2" for="message">- Message</label>
                     <textarea id="message" rows="4" name="message" placeholder="Let's talk about..."
-                        class="w-full px-4 py-2 rounded-lg bg-blue-900 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        class="w-full px-4 py-2 rounded-lg bg-black/30 text-white placeholder-gray-300 outline-none focus:ring-2 focus:ring-blue-500"></textarea>
                 </div>
                 <div>
                     <label class="block text-white font-bold mb-2" for="file">- Project Sample (png,jpeg)</label>
                     <input type="file" id="file" name="attachment" accept="image/png, image/jpeg"
-                        class="w-full px-4 py-2 border border-blue-500 text-gray-100 rounded-lg cursor-pointer focus:ring-2 focus:ring-blue-500">
+                        class="w-full px-4 py-2 border bg-black/30 text-gray-100 rounded-lg cursor-pointer focus:ring-2 focus:ring-blue-500">
                 </div>
                 <div>
                     <button type="submit"
-                        class="w-full bg-blue-500 text-white font-bold py-2 rounded-lg hover:bg-blue-600 transition-colors">Submit</button>
+                        class="w-full bg-black/60 text-white font-bold py-2 rounded-lg hover:bg-black/30 transition-colors">Submit</button>
                 </div>
                 <input type="hidden" name="_captcha" value="false">
                 <hr class="mt-2 mx-4">
@@ -558,7 +855,7 @@
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
-<link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 
     <!-- Contact Section -->
     <section class="text-center mt-8 ">
@@ -568,7 +865,7 @@
             class="mt-6 flex justify-center space-x-6 p-6 rounded-lg shadow-lg border border-white bg-black/50 max-w-md mx-auto overflow-hidden">
             <!-- Added overflow-hidden to the container -->
 
-            <a href="https://github.com/SasinduChandupa" class="text-white hover:text-gray-400" title="github"> 
+            <a href="https://github.com/SasinduChandupa" class="text-white hover:text-gray-400" title="github">
                 <i class="fa-brands fa-github fa-2xl"></i>
             </a>
             <a href="https://twitter.com/chandupa02" class="text-white hover:text-gray-400" title="X">
@@ -594,7 +891,8 @@
 
     <!-- Footer -->
     <footer class="bg-black/40 text-gray-400 mt-6" id="footer">
-        <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left text-white">
+        <div
+            class="px-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left text-white mb-2">
             <p class="flex-1 md:flex-none md:text-left pl-6 mt-4">Check me on social networks:</p>
 
             <div class="mt-4 flex space-x-4 justify-center md:justify-end flex-1 pr-6">
@@ -611,9 +909,10 @@
             </div>
         </div>
 
-        <hr class="mt-2 mx-4">
+        <hr class="mt-2 mx-8 mt-5">
 
-        <div class="mt-4 flex flex-col md:flex-row justify-between items-center md:items-start text-center md:text-left">
+        <div
+            class="mt-4 flex flex-col md:flex-row justify-between items-center md:items-start text-center md:text-left">
             <div class="px-4 md:px-8">
                 <h4 class="text-xl font-bold">Sasindu Chandupa</h4>
                 <p>If you want to create a front end for your website or any software, hire me.</p>
@@ -624,10 +923,11 @@
                 <li><i class="fas fa-phone"></i> +94 76 977 3393</li>
             </ul>
         </div>
-        
+
 
         <div class="text-center mt-4 bg-black/70">
-            © 2024 Copyright: <a href="https://sasinduchandupa.github.io/SasinduChandupaJayawardana/" class="underline font-semibold">SasinduChandupa.com</a>
+            © 2024 Copyright: <a href="https://sasinduchandupa.github.io/SasinduChandupaJayawardana/"
+                class="underline font-semibold">SasinduChandupa.com</a>
         </div>
     </footer>
 
@@ -652,19 +952,30 @@
             <div class="p-1 border-t bg-gray-500 text-black" id="suggestions">
                 <p class="mb-2 font-bold">Try asking:</p>
                 <div class="flex space-x-2 overflow-x-auto w-full scrollbar-hidden">
-                    <button onclick="useSuggestion('hello')" class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">Hello</button>
-                    <button onclick="useSuggestion('full name')" class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">Full Name</button>
-                    <button onclick="useSuggestion('what is your purpose')" class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">What is your purpose?</button>
-                    <button onclick="useSuggestion('do you have any projects')" class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">Do you have any projects?</button>
-                    <button onclick="useSuggestion('how can I contact')" class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">How can I contact?</button>
-                    <button onclick="useSuggestion('do you offer services')" class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">Do you offer services?</button>
-                    <button onclick="useSuggestion('favorite programming language')" class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">Favorite Programming Language</button>
+                    <button onclick="useSuggestion('hello')"
+                        class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">Hello</button>
+                    <button onclick="useSuggestion('full name')"
+                        class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">Full Name</button>
+                    <button onclick="useSuggestion('what is your purpose')"
+                        class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">What is your purpose?</button>
+                    <button onclick="useSuggestion('do you have any projects')"
+                        class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">Do you have any projects?</button>
+                    <button onclick="useSuggestion('how can I contact')"
+                        class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">How can I contact?</button>
+                    <button onclick="useSuggestion('do you offer services')"
+                        class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">Do you offer services?</button>
+                    <button onclick="useSuggestion('favorite programming language')"
+                        class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">Favorite Programming
+                        Language</button>
                     <!-- Add more suggestions as needed -->
                 </div>
             </div>
             <div class="flex p-4 border-t">
-                <input type="text" id="userInput" class="flex-grow border rounded-lg p-2 bg-gray-400 text-black font-bold" placeholder="Type your message here...">
-                <button onclick="sendMessage()" class="ml-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+                <input type="text" id="userInput"
+                    class="flex-grow border rounded-lg p-2 bg-gray-400 text-black font-bold"
+                    placeholder="Type your message here...">
+                <button onclick="sendMessage()"
+                    class="ml-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
                     Send
                 </button>
             </div>
