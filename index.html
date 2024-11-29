@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <link rel="icon" type="image/x-icon" href="Image/Scaj.png">
+    <link rel="icon" type="image/x-icon" href="Image/scajlogo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -165,7 +165,7 @@
 
         /* scroll bar */
         ::-webkit-scrollbar {
-            width: 10px;
+            width: 0px;
         }
 
         ::-webkit-scrollbar-track {
@@ -253,14 +253,58 @@
     </div>
 
     <!-- Navbar -->
-    <nav class="flex justify-center items-center p-4 bg-black/40 w-full">
-        <ul class="flex space-x-6 md:space-x-12 text-lg md:text-xl font-medium">
-            <li id="l1"><a class="hover:text-gray-300" href="#home">Home</a></li>
-            <li id="l2"><a class="hover:text-gray-300" href="#footer">About</a></li>
-            <li id="l3"><a class="hover:text-gray-300" href="https://wa.me/94769773393">Contact</a></li>
-            <li id="l4"><a class="hover:text-gray-300" href="#skills">Skills</a></li>
-        </ul>
+    <nav class="bg-black/10 border-gray-200">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="Image/Scaj.png" class="h-8" alt="Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-black">SCAJ</span>
+            </a>
+            <!-- Hamburger Button -->
+            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false" onclick="toggleMenu()">
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <!-- Navigation Menu -->
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent">
+                    <li>
+                        <a href="index.html"
+                            class="block py-2 px-3 text-black hover:text-white hover:bg-black rounded md:p-0"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="About.html"
+                            class="block py-2 px-3 text-black hover:text-white hover:bg-black rounded md:p-0">About</a>
+                    </li>
+                    <li>
+                        <a href="#Skills"
+                            class="block py-2 px-3 text-black hover:text-white hover:bg-black rounded md:p-0">Skills</a>
+                    </li>
+                    <li>
+                        <a href="projects.html"
+                            class="block py-2 px-3 text-black hover:text-white hover:bg-black rounded md:p-0">Projects</a>
+                    </li>
+                    <li>
+                        <a href="https://medium.com/@sasinduchandupa"
+                            class="block py-2 px-3 text-black hover:text-white hover:bg-black rounded md:p-0">Blogs</a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/94769773393"
+                            class="block py-2 px-3 text-black hover:text-white hover:bg-black rounded md:p-0">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </nav>
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar-default');
+            navbar.classList.toggle('hidden');
+        }
+    </script>
+
 
     <!-- Hero Section -->
     <section class="text-center ">
@@ -608,7 +652,6 @@
 
     <!-- About Section -->
     <section class="text-center py-4">
-        <h1 class="text-4xl text-yellow-400 font-bold">About</h1>
         <p class="text-2xl mt-4 font-bold font-righteous">Sasindu Chandupa Abeysekara Jayawardana</p>
         <h5 class="text-lg mt-2 text-gray-300 font-serif font-semibold italic w-full max-w-md text-center mx-auto">
             A passionate Software Engineer from SriLanka
@@ -629,7 +672,7 @@
     </section>
 
     <!-- Skills Section -->
-    <h1 id="skills" class="text-4xl text-yellow-400 font-bold text-center py-8">Skills</h1>
+    <h1 id="Skills" class="text-4xl text-yellow-400 font-bold text-center py-8">Skills</h1>
     <section id="skills" class="text-center flex justify-center">
         <div class="flex space-x-6 overflow-x-auto px-4">
 
@@ -676,10 +719,10 @@
     </section>
 
     <!-- Skill bars -->
-    <div class="container mx-auto mt-5 py-4 ">
+    <div class="container mx-auto mt-5 py-4">
         <div class="bar-1 w-4/5 mx-auto mb-6">
             <div class="title text-lg font-bold" style="color: #ffffff;">HTML5</div>
-            <div class="bar bg-white/20 h-9 rounded-lg relative overflow-hidden border-2 border-blue-200"
+            <div class="bar bg-white/20 h-9 rounded-lg relative overflow-hidden border-2 border-white"
                 data-width="95%">
                 <div class="bar-inner h-full rounded-l-lg" style="width: 0; background-color: #302d03;"></div>
                 <div class="bar-percent absolute right-2 top-1 text-lg font-semibold text-white">95%</div>
@@ -687,7 +730,7 @@
         </div>
         <div class="bar-1 w-4/5 mx-auto mb-6">
             <div class="title text-lg font-bold" style="color: #ffffff;">CSS3</div>
-            <div class="bar bg-white/20 h-9 rounded-lg relative overflow-hidden border-2 border-blue-200"
+            <div class="bar bg-white/20 h-9 rounded-lg relative overflow-hidden border-2 border-white"
                 data-width="90%">
                 <div class="bar-inner h-full rounded-l-lg" style="width: 0; background-color: #4e4a0f;"></div>
                 <div class="bar-percent absolute right-2 top-1 text-lg font-semibold text-white">90%</div>
@@ -695,7 +738,7 @@
         </div>
         <div class="bar-1 w-4/5 mx-auto mb-6">
             <div class="title text-lg font-bold" style="color: #ffffff;">Java Script</div>
-            <div class="bar bg-white/20 h-9 rounded-lg relative overflow-hidden border-2 border-blue-200"
+            <div class="bar bg-white/20 h-9 rounded-lg relative overflow-hidden border-2 border-white"
                 data-width="85%">
                 <div class="bar-inner h-full rounded-l-lg" style="width: 0; background-color: #888122;"></div>
                 <div class="bar-percent absolute right-2 top-1 text-lg font-semibold text-white">85%</div>
@@ -703,7 +746,7 @@
         </div>
         <div class="bar-1 w-4/5 mx-auto mb-6">
             <div class="title text-lg font-bold" style="color: #ffffff">PHP</div>
-            <div class="bar bg-white/20 h-9 rounded-lg relative overflow-hidden border-2 border-blue-200"
+            <div class="bar bg-white/20 h-9 rounded-lg relative overflow-hidden border-2 border-white"
                 data-width="80%">
                 <div class="bar-inner h-full rounded-l-lg" style="width: 0; background-color: #999b35;"></div>
                 <div class="bar-percent absolute right-2 top-1 text-lg font-semibold text-white">80%</div>
@@ -711,7 +754,7 @@
         </div>
         <div class="bar-1 w-4/5 mx-auto mb-6">
             <div class="title text-lg font-bold" style="color: #ffffff">JAVA / JAVA swing</div>
-            <div class="bar bg-white/20 h-9 rounded-lg relative overflow-hidden border-2 border-blue-200"
+            <div class="bar bg-white/20 h-9 rounded-lg relative overflow-hidden border-2 border-white"
                 data-width="70%">
                 <div class="bar-inner h-full rounded-l-lg" style="width: 0; background-color: #c7c67f;"></div>
                 <div class="bar-percent absolute right-2 top-1 text-lg font-semibold text-white">70%</div>
@@ -727,64 +770,6 @@
             });
         });
     </script>
-
-    <!-- My projects -->
-    <section class="py-12 px-4 sm:px-6 md:px-80">
-        <h1 id="skills" class="text-4xl text-yellow-400 font-bold text-center py-8">My projects</h1>
-        <!-- Container with horizontal scrolling on mobile -->
-        <div class="flex sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-auto sm:overflow-visible py-6">
-            <!-- Destination 1 -->
-            <div
-                class="border border-white bg-white/10 flex-shrink-0 w-64 sm:w-auto rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                <img src="Image/hungryme.png" alt="Switzerland" class="w-full h-48 sm:h-64 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg sm:text-xl font-bold text-gray-300 text-white">HungryMe</h3>
-                    <p class="text-sm sm:text-base text-gray-300 mt-2">
-                        Final Project of University Diploma Level / food ordering System <br><i
-                            class="text-gray-400">Technologies - HTML, PHP, Js</i>
-                    </p>
-                    <a href="https://github.com/SasinduChandupa/HungryMe-Git.git"
-                        class="text-blue-500 mt-4 inline-block hover:underline">
-                        Github &rarr;
-                    </a>
-                </div>
-            </div>
-
-            <!-- Destination 2 -->
-            <div
-                class="border border-white bg-white/10 flex-shrink-0 w-64 sm:w-auto rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                <img src="Image/moneyBank.png" alt="Singapore" class="w-full h-48 sm:h-64 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg sm:text-xl font-bold text-gray-300">MoneyBank</h3>
-                    <p class="text-sm sm:text-base text-gray-300 mt-2">
-                        Banking System for the Admin panal & customers <br><i class="text-gray-400">Technologies - JAVA,
-                            Java Swing</i>
-                    </p>
-                    <a href="https://github.com/SasinduChandupa/MoneyBank_JAVA.git"
-                        class="text-blue-500 mt-4 inline-block hover:underline">
-                        Github &rarr;
-                    </a>
-                </div>
-            </div>
-
-            <!-- Destination 3 -->
-            <div
-                class="border border-white bg-white/10 flex-shrink-0 w-64 sm:w-auto rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
-                <img src="Image/furnitu.png" alt="Dubai" class="w-full h-48 sm:h-64 object-cover">
-                <div class="p-6">
-                    <h3 class="text-lg sm:text-xl font-bold text-gray-300">Furniture Lanka</h3>
-                    <p class="text-sm sm:text-base text-gray-300 mt-2">
-                        This is our university Web Application Development (WAD) module CW <br><i
-                            class="text-gray-400">Technologies - HTML, PHP, CSS, Js, MySQL</i>
-                    </p>
-                    <a href="https://github.com/SasinduChandupa/FurnitureLanka-WAD_University_CW.git"
-                        class="text-blue-500 mt-4 inline-block hover:underline">
-                        Github &rarr;
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
     <!-- Certificate -->
