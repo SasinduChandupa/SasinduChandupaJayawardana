@@ -44,7 +44,7 @@
         .wrapper div {
             height: 60px;
             width: 60px;
-            border: 2px solid rgba(255, 255, 255, 0.7);
+            border: 2px solid rgba(0, 0, 0, 0.7);
             border-radius: 50px;
             position: absolute;
             top: 10%;
@@ -56,7 +56,7 @@
             height: 10px;
             width: 10px;
             border-radius: 50px;
-            background: rgba(255, 255, 255, 0.5);
+            background: rgba(0, 0, 0, 0.5);
             position: absolute;
             top: 20%;
             right: 20%;
@@ -224,9 +224,13 @@
                 <span class="self-center text-2xl font-semibold whitespace-nowrap text-black">SCAJ</span>
             </a>
             <!-- Hamburger Button -->
-            <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false" onclick="toggleMenu()">
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                aria-controls="navbar-default" aria-expanded="false" onclick="toggleMenu()">
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
                 </svg>
             </button>
             <!-- Navigation Menu -->
@@ -287,7 +291,8 @@
 
         <!-- Text Section -->
         <div class="col-span-2 p-2 md:p-12">
-            <p class="text-white text-lg font-mono text-left md:text-justify">
+            <p class="text-white text-lg
+             text-left md:text-justify">
                 Sasindu Chandupa, a passionate Software Engineering student at NIBM, is rapidly building his
                 expertise in front-end development and software solutions. With a strong commitment to learning and
                 community engagement, Sasindu is laying the foundation for a promising career in the tech
@@ -307,10 +312,57 @@
                 In addition to his technical pursuits, Sasindu leverages platforms like LinkedIn and his blog to
                 inspire and educate others in the tech ecosystem. With a vision to make a meaningful impact in the
                 field, Sasindu aspires to empower fellow developers and businesses alike, embodying the values of
-                collaboration, growth, and excellence.
+                collaboration, growth, and excellence.<br><br>
             </p>
+            <button class="font-bold" onclick="toggleImage()">Wants to know more 🤔</button>
         </div>
     </section>
+
+    <!-- Career img -->
+    <!-- Career img -->
+<section class="flex justify-center items-center">
+    <div id="imageContainer" class="p-12 mx-auto my-auto flex justify-center items-center" style="display: none;">
+        <img src="Image/Sasi career parth.png" alt="ABC Image"
+            class="w-full max-w-lg sm:max-w-md md:max-w-lg lg:max-w-xl transition-transform duration-300 ease-out transform" />
+    </div>
+</section>
+
+<script>
+    const image = document.querySelector("#imageContainer img");
+
+    image.addEventListener("mousemove", (e) => {
+        const { offsetWidth: width, offsetHeight: height } = image;
+        const { offsetX: x, offsetY: y } = e;
+
+        // Get the center position of the image
+        const centerX = width / 4;
+        const centerY = height / 4;
+
+        // Calculate the angle of rotation based on mouse position
+        const angleX = ((y - centerY) / height) * 40; // Max tilt 30deg on X-axis
+        const angleY = ((x - centerX) / width) *  40; // Max tilt -30deg on Y-axis
+
+        // Apply the rotation to simulate the 3D effect
+        image.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg)`;
+    });
+
+    image.addEventListener("mouseleave", () => {
+        image.style.transform = "rotateX(0deg) rotateY(0deg)"; // Reset when cursor leaves
+    });
+</script>
+
+
+    <script>
+        function toggleImage() {
+            var imageContainer = document.getElementById("imageContainer");
+            if (imageContainer.style.display === "none") {
+                imageContainer.style.display = "block";
+            } else {
+                imageContainer.style.display = "none";
+            }
+        }
+
+    </script>
 
     <!-- Footer -->
     <footer class="bg-black/40 text-gray-400 mt-6" id="footer">
