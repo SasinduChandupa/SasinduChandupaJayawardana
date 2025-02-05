@@ -664,7 +664,7 @@
             <hr class="w-64 border-gray-300 border-t-2">
         </div>
         
-        <p class="mt-4 font-serif">🌱 I’m currently learning Software Engineering <br> 👀 I’m interested in
+        <p class="mt-4 font-serif">🌱 Currently learning Software Engineering <br> 👀 Interested in
             Programming
             <br> 💬 Ask
             me about HTML, CSS, JAVA Swing <br> ⚡ Fun fact: Call me <b><i>Sasi</i></b>
@@ -691,10 +691,10 @@
                 <i class="fa-brands fa-php fa-3x"></i>
                 <p class="text-white mt-2">PHP</p>
             </div>
-    
+                
             <div class="bg-black/60 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36 transform transition-all duration-300 hover:scale-110">
-                <i class="fa-brands fa-java fa-3x"></i>
-                <p class="text-white mt-2">JAVA</p>
+                <i class="fa-brands fa-bootstrap fa-3x"></i>
+                <p class="text-white mt-2">Bootstrap</p>
             </div>
     
             <div class="bg-black/60 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36 transform transition-all duration-300 hover:scale-110">
@@ -708,15 +708,9 @@
             </div>
     
             <div class="bg-black/60 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36 transform transition-all duration-300 hover:scale-110">
-                <i class="fa-brands fa-bootstrap fa-3x"></i>
-                <p class="text-white mt-2">Bootstrap</p>
-            </div>
-    
-            <div class="bg-black/60 p-6 rounded-lg shadow-lg flex flex-col justify-center items-center w-36 transform transition-all duration-300 hover:scale-110">
                 <i class="fa-solid fa-c fa-3x"></i>
                 <p class="text-white mt-2">C / C# / C++</p>
-            </div>
-    
+            </div>  
         </div>
     </section>
     
@@ -955,13 +949,14 @@
                         class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">What is your purpose?</button>
                     <button onclick="useSuggestion('do you have any projects')"
                         class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">Do you have any projects?</button>
-                    <button onclick="useSuggestion('how can I contact')"
-                        class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">How can I contact?</button>
+                    <button onclick="useSuggestion('how do you contact')"
+                        class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">how do you contact?</button>
                     <button onclick="useSuggestion('do you offer services')"
                         class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">Do you offer services?</button>
                     <button onclick="useSuggestion('favorite programming language')"
-                        class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">Favorite Programming
-                        Language</button>
+                        class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">Favorite Programming Language</button>
+                    <button onclick="useSuggestion('bye')"
+                        class="bg-blue-100 px-3 py-1 rounded-lg hover:bg-blue-600">bye</button>
                     <!-- Add more suggestions as needed -->
                 </div>
             </div>
@@ -990,16 +985,16 @@
 
         // Predefined responses from the bot
         const botResponses = {
-            "hello": "Hi there! How can I help you?",
+            "hello": "Hi there! How can I help you? 😊",
             "full name": "My name is Sasindu Chandupa Abesekara Jayawardana.",
-            "bye": "Goodbye! Have a great day!",
+            "how do you contact": "You can contact email directly at scaj12345@gmail.com. 📩",
+            "bye": "Goodbye! Have a great day! 😊",
             "how are you": "I'm just a bot, but I'm doing great! How about you?",
             "what is your purpose": "I'm here to assist you with information about this website and answer your questions.",
             "who created you": "I was created by Sasindu Chandupa to help visitors interact with the website.",
             "what is this website about": "This website showcases projects, blogs, and tutorials related to web development and software engineering.",
             "tell me a joke": "Why don't programmers like nature? It has too many bugs!",
-            "favorite programming language": "I think JavaScript is pretty cool, but I don't really have favorites!",
-            "how can I contact": "You can contact email directly at scaj12345@gmail.com.",
+            "favorite programming language": "I think HTML and Tailwind css I like mostly 😍",
             "do you offer services": "Yes, various services like web development, software engineering, and UI/UX design are available.",
             "where are you located": "The website owner is located in Galle, Sri Lanka.",
             "do you have any projects": "Yes! Check out the 'Contact' section 'Github' for details on various software and web development projects.",
