@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image/x-icon" href="Image/scajlogo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sasindu Chandupa / Gallery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script src="script.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(180deg, #b9b9b9, 5%, #676768, 50%, #171718);
+            position: fixed;
+            z-index: -1;
+        }
+
+        .wrapper h1 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            font-family: sans-serif;
+            letter-spacing: 1px;
+            word-spacing: 2px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: 888;
+            text-transform: uppercase;
+        }
+
+        .wrapper div {
+            height: 60px;
+            width: 60px;
+            border: 2px solid rgba(0, 0, 0, 0.7);
+            border-radius: 50px;
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            animation: 4s linear infinite;
+        }
+
+        div .dot {
+            height: 10px;
+            width: 10px;
+            border-radius: 50px;
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 20%;
+            right: 20%;
+        }
+
+        .wrapper div:nth-child(1) {
+            top: 20%;
+            left: 20%;
+            animation: animate 8s linear infinite;
+        }
+
+        .wrapper div:nth-child(2) {
+            top: 60%;
+            left: 80%;
+            animation: animate 10s linear infinite;
+        }
+
+        .wrapper div:nth-child(3) {
+            top: 40%;
+            left: 40%;
+            animation: animate 3s linear infinite;
+        }
+
+        .wrapper div:nth-child(4) {
+            top: 66%;
+            left: 30%;
+            animation: animate 7s linear infinite;
+        }
+
+        .wrapper div:nth-child(5) {
+            top: 90%;
+            left: 10%;
+            animation: animate 9s linear infinite;
+        }
+
+        .wrapper div:nth-child(6) {
+            top: 30%;
+            left: 60%;
+            animation: animate 5s linear infinite;
+        }
+
+        .wrapper div:nth-child(7) {
+            top: 70%;
+            left: 20%;
+            animation: animate 8s linear infinite;
+        }
+
+        .wrapper div:nth-child(8) {
+            top: 75%;
+            left: 60%;
+            animation: animate 10s linear infinite;
+        }
+
+        .wrapper div:nth-child(9) {
+            top: 50%;
+            left: 50%;
+            animation: animate 6s linear infinite;
+        }
+
+        .wrapper div:nth-child(10) {
+            top: 45%;
+            left: 20%;
+            animation: animate 10s linear infinite;
+        }
+
+        .wrapper div:nth-child(11) {
+            top: 10%;
+            left: 90%;
+            animation: animate 9s linear infinite;
+        }
+
+        .wrapper div:nth-child(12) {
+            top: 20%;
+            left: 70%;
+            animation: animate 7s linear infinite;
+        }
+
+        .wrapper div:nth-child(13) {
+            top: 20%;
+            left: 20%;
+            animation: animate 8s linear infinite;
+        }
+
+        .wrapper div:nth-child(14) {
+            top: 60%;
+            left: 5%;
+            animation: animate 6s linear infinite;
+        }
+
+        .wrapper div:nth-child(15) {
+            top: 90%;
+            left: 80%;
+            animation: animate 9s linear infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: scale(0) translateY(0) rotate(70deg);
+            }
+
+            100% {
+                transform: scale(1.3) translateY(-100px) rotate(360deg);
+            }
+        }
+
+        /* scroll bar */
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #121213;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #b9b9b9;
+            border-radius: 10px;
+            border: 2px solid #1e1e2f;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #ffb74d;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .scrollbar-hidden {
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .scrollbar-hidden::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body class=" text-white">
+    <div class="wrapper">
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+        <div><span class="dot"></span></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="bg-black/10 border-gray-200">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="Image/Scaj.png" class="h-8" alt="Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-black">SCAJ</span>
+            </a>
+            <!-- Hamburger Button -->
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-200"
+                aria-controls="navbar-default" aria-expanded="false" onclick="toggleMenu()">
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <!-- Navigation Menu -->
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent">
+                    <li>
+                        <a href="index.html"
+                            class="block py-2 px-3 text-black hover:text-white hover:bg-black rounded md:p-0"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="About.html"
+                            class="block py-2 px-3 text-black hover:text-white hover:bg-black rounded md:p-0">About</a>
+                    </li>
+                    <li>
+                        <a href="index.html#Skills"
+                            class="block py-2 px-3 text-black hover:text-white hover:bg-black rounded md:p-0">Skills</a>
+                    </li>
+                    <li>
+                        <a href="projects.html"
+                            class="block py-2 px-3 text-black hover:text-white hover:bg-black rounded md:p-0">Projects</a>
+                    </li>
+                    <li>
+                        <a href="Gallery.html"
+                            class="block py-2 px-3 text-black hover:text-white hover:bg-black rounded md:p-0">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="https://medium.com/@sasinduchandupa"
+                            class="block py-2 px-3 text-black hover:text-white hover:bg-black rounded md:p-0">Blogs</a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/94769773393"
+                            class="block py-2 px-3 text-black hover:text-white hover:bg-black rounded md:p-0">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById('navbar-default');
+            navbar.classList.toggle('hidden');
+        }
+    </script>
+
+
+    <!-- Hero Section -->
+    <section class="text-center ">
+        <div id="typewriter" class="text-2xl font-bold"></div>
+        <div class="mt-6">
+            <h1 class="font-semibold text-4xl">Gallery<span
+                    style="background: linear-gradient(to right, orange, yellow); -webkit-background-clip: text; color: transparent;">
+        </div>
+    </section>
+
+    <body>
+        <section class="flex justify-center py-8">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <!-- Image Cards -->
+                    <div class="relative w-full h-60 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="/Image/GenAI.jpg" class="w-full h-full object-cover rounded-lg">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition duration-300">
+                            <span class="text-white items-center text-center">
+                                <h1 class="text-xl font-bold">GenAI Tour 2025</h1>
+                                <p class="italic">I participated in the GenAI and API Tour 2025 in Sri Lanka at the NIBM Colombo
+                                    Campus.</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-60 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="Image/githubjouney.jpg" class="w-full h-full object-cover rounded-lg">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition duration-300">
+                            <span class="text-white items-center text-center">
+                                <h1 class="text-xl font-bold">GitHub Learning Journey day at NIBM-Galle</h1>
+                                <p class="italic">Got hands-on exposure to GitHub and its importance in software development and collaboration</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-60 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="Image/final.jpg" class="w-full h-full object-cover rounded-lg">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition duration-300">
+                            <span class="text-white items-center text-center">
+                                <h1 class="text-xl font-bold">Diploma Final Project VIVA</h1>
+                                <p class="italic">Final Project of University Diploma Level / food ordering System <b>HungryMe</b></p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-60 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="Image/CloudComputing.jpeg" class="w-full h-full object-cover rounded-lg">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition duration-300">
+                            <span class="text-white items-center text-center">
+                                <h1 class="text-xl font-bold">Cloud Computing Session Day</h1>
+                                <p class="italic">The session on cloud computing technologies at NIBM-Galle led by Mr.Chamith Kumarage was incredibly useful</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-60 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="Image/openSource.jpg" class="w-full h-full object-cover rounded-lg">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition duration-300">
+                            <span class="text-white items-center text-center">
+                                <h1 class="text-xl font-bold">FOSS Technologies & Tools in Enterprise Application Development</h1>
+                                <p class="italic">This session is about the FOSS Technologies & Tools in Enterprise Application Development, conducted by the inspiring Madhusanka Goonathilake (NIBM Alumni).</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-60 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="Image/ChatBot.jpg" class="w-full h-full object-cover rounded-lg">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition duration-300">
+                            <span class="text-white items-center text-center">
+                                <h1 class="text-xl font-bold">ChatBot Development Session</h1>
+                                <p class="italic">This session is about the ChatBot Development, conducted by the Nisal Gunawardana</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-60 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="Image/studentAm.jpg" class="w-full h-full object-cover rounded-lg">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition duration-300">
+                            <span class="text-white items-center text-center">
+                                <h1 class="text-xl font-bold">Azure OpenAI Session</h1>
+                                <p class="italic">I attended a Microsoft Learn Student Ambassadors live session on "Microsoft AI Adventures – Azure OpenAI and Azure AI Search" hosted by Dileepa Bandara</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="relative w-full h-60 rounded-lg shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="Image/GPT.jpg" class="w-full h-full object-cover rounded-lg">
+                        <div
+                            class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition duration-300">
+                            <span class="text-white items-center text-center">
+                                <h1 class="text-xl font-bold"> Turning My Life into Art with ChatGPT</h1>
+                                <p class="italic">I asked ChatGPT to illustrate my current journey as a tech enthusiast</p>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/40 text-gray-400 mt-6" id="footer">
+        <div
+            class="px-4 flex flex-col md:flex-row justify-between items-center text-center md:text-left text-white mb-2">
+            <p class="flex-1 md:flex-none md:text-left pl-6 mt-4">Check me on social networks:</p>
+
+            <div class="mt-4 flex space-x-4 justify-center md:justify-end flex-1 pr-6">
+                <a href="https://www.facebook.com/sasindu.chandupa?mibextid=ZbWKwL"
+                    class="text-white hover:text-gray-400">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://twitter.com/chandupa02" class="text-white hover:text-gray-400">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/chandupa._/" class="text-white hover:text-gray-400">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+
+        <hr class="mt-2 mx-8 mt-5">
+
+        <div
+            class="mt-4 flex flex-col md:flex-row justify-between items-center md:items-start text-center md:text-left">
+            <div class="px-4 md:px-8">
+                <h4 class="text-xl font-bold">Sasindu Chandupa</h4>
+                <p>If you want to create a front end for your website or any software, hire me.</p>
+            </div>
+            <ul class="mt-4 space-y-1 text-center md:text-left pr-4 md:pr-8">
+                <li><i class="fas fa-home"></i> Galle, SriLanka</li>
+                <li><i class="fas fa-envelope"></i> scaj12345@gmail.com</li>
+                <li><i class="fas fa-phone"></i> +94 76 977 3393</li>
+            </ul>
+        </div>
+
+
+        <div class="text-center mt-4 bg-black/70">
+            © 2024 Copyright: <a href="https://sasinduchandupa.github.io/SasinduChandupaJayawardana/"
+                class="underline font-semibold">SasinduChandupa.com</a>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
