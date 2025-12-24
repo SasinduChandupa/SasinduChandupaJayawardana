@@ -336,8 +336,8 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const typewriter1Text = "Most Interest";
-            const typewriter2Text = "Front-end Developing";
-            const typewriter3Text = "UI/UX Designing";
+            const typewriter2Text = "UI/UX Designing";
+            const typewriter3Text = "and Prototyping";
 
             const typewriter1 = document.querySelector('.typewriter-1');
             const typewriter2 = document.querySelector('.typewriter-2');
@@ -388,9 +388,9 @@
 
     <!-- My image -->
     <div class="flex items-center justify-center py-4">
-        <img id="profileImage" src="Image/me2.jpg" alt="Profile Image"
+        <img id="profileImage" src="Image/me3.jpg" alt="Profile Image"
             class="w-64 h-64 rounded-full object-cover transition-transform transition-opacity duration-500"
-            onmouseover="changeImage('Image/me1.jpg')" onmouseout="changeImage('Image/me2.jpg')">
+            onmouseover="changeImage('Image/me2.jpg')" onmouseout="changeImage('Image/me3.jpg')">
     </div>
 
     <script>
@@ -646,8 +646,7 @@
     <!-- CV -->
     <div class="flex items-center justify-center py-2 gap-4 px-2">
         <!-- Download CV Button -->
-        <a id="downloadCvBtn"
-            href="https://drive.google.com/file/d/1RYI-O4g8moSbWz8q87fz7es6SwHpv_pH/view?usp=sharing"
+        <a id="downloadCvBtn" href="https://drive.google.com/file/d/1RYI-O4g8moSbWz8q87fz7es6SwHpv_pH/view?usp=sharing"
             class="inline-block" title="Download CV"><button class='glowing-btn'><span class='glowing-txt'>Down<span
                         class='faulty-letter'>load</span> CV</span></button></a>
 
@@ -657,7 +656,46 @@
             class="inline-block bg-gray-400 text-black" title="E-Certificate"><button class='glowing-btn'><span
                     class='glowing-txt'>Cer<span class='faulty-letter'>tifi</span>cate</span></button></a>
     </div>
+    <br><Br>
+    <style>
+        .behance-yellow-btn {
+            --glow-color: #ffcc00;
+            /* Behance Yellow/Gold */
+            background: transparent;
+            cursor: pointer;
+            border: 0.1em solid var(--glow-color);
+            padding: 0.6em 3em;
+            color: var(--glow-color);
+            font-family: "font-serif", sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+            background-color: rgba(255, 204, 0, 0.05);
+            border-radius: 0.45em;
+            outline: none;
+            box-shadow: 0 0 0.5em 0.1em var(--glow-color),
+                inset 0 0 0.5em 0.1em var(--glow-color);
+            text-shadow: 0 0 0.5em var(--glow-color);
+            position: relative;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
+        .behance-yellow-btn:hover {
+            color: black;
+            background-color: var(--glow-color);
+            box-shadow: 0 0 1.5em 0.25em var(--glow-color);
+        }
+    </style>
+
+    <div class="flex items-center justify-center py-2">
+        <a href="https://www.behance.net/sasindujayawar1" target="_blank" style="text-decoration: none;">
+            <button class="behance-yellow-btn">
+                Behance 🎨
+            </button>
+        </a>
+    </div>
 
     <!-- About Section -->
     <section class="text-center py-4">
@@ -883,7 +921,7 @@
             class="mt-4 flex flex-col md:flex-row justify-between items-center md:items-start text-center md:text-left">
             <div class="px-4 md:px-8">
                 <h4 class="text-xl font-bold">Sasindu Chandupa</h4>
-                <p>If you want to create a front end for your website or any software, hire me.</p>
+                <p>If you want to create a UI design for your website or any software, hire me.</p>
             </div>
             <ul class="mt-4 space-y-1 text-center md:text-left pr-4 md:pr-8">
                 <li><i class="fas fa-home"></i> Galle, SriLanka</li>
